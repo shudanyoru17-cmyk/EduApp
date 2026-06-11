@@ -12,10 +12,12 @@ coreKtx = "1.13.1"
 activityCompose = "1.9.2"
 hiltNavCompose = "1.2.0"
 splashscreen = "1.0.1"
+material = "1.12.0"
 
 [libraries]
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
 core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "splashscreen" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
 compose-ui = { module = "androidx.compose.ui:ui" }

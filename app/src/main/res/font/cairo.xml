@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cairo font family — maps weights to the bundled static .ttf files.
+     Usable from both the View/XML theme (android:fontFamily="@font/cairo")
+     and Compose (Font(R.font.cairo)). -->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/cairo_regular" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="500"
+        android:font="@font/cairo_medium" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        android:font="@font/cairo_bold" />
+</font-family>

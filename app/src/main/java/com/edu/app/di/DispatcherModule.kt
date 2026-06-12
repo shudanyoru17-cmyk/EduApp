@@ -16,7 +16,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object DispatcherModule {
     @Provides @IoDispatcher fun io(): CoroutineDispatcher = Dispatchers.IO
-    @Provides @DefaultDispatcher fun default(): CoroutineDispatcher = Dispatchers.Default
+    @Provides @DefaultDispatcher fun provideDefault(): CoroutineDispatcher = Dispatchers.Default
     @Provides @Singleton fun clock() = Clock()
     @Provides @Singleton fun ids() = IdGenerator()
 }

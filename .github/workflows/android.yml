@@ -35,14 +35,9 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      # The wrapper JAR is not committed; generate it if missing.
-      - name: Ensure Gradle wrapper
-        run: |
-          if [ ! -f gradle/wrapper/gradle-wrapper.jar ]; then
-            echo "Wrapper jar missing — generating with system Gradle…"
-            gradle wrapper --gradle-version 8.9
-          fi
-          chmod +x gradlew
+      # The wrapper (incl. gradle-wrapper.jar) is committed; just ensure it's executable.
+      - name: Make gradlew executable
+        run: chmod +x gradlew
 
       - name: Build debug APK
         run: ./gradlew assembleDebug --stacktrace
